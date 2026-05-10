@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutzerklärung - WAB-App</title>
+    <title>Datenschutzerklärung - WURSTAUFSBROT</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -11,53 +11,72 @@
             color: #333;
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #f9f9f9;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        .header-area {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .logo {
+            max-width: 150px; /* Hier kannst du die Größe deines Logos anpassen */
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .app-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #d35400;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-top: 5px;
         }
         .container {
             background: #fff;
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #d35400;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
         h2 {
             color: #2c3e50;
             margin-top: 30px;
+            border-left: 4px solid #d35400;
+            padding-left: 15px;
         }
         .date {
-            color: #7f8c8d;
+            color: #bdc3c7;
             font-size: 0.9em;
             margin-bottom: 30px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .footer {
-            margin-top: 50px;
-            font-size: 0.8em;
-            color: #95a5a6;
             text-align: center;
         }
-        a {
-            color: #3498db;
-            text-decoration: none;
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.85em;
+            color: #95a5a6;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
         }
-        a:hover {
-            text-decoration: underline;
-        }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
+
+    <div class="header-area">
+        <img src="logo.png" alt="WURSTAUFSBROT Logo" class="logo">
+        <div class="app-name">WURSTAUFSBROT</div>
+        <div class="subtitle">Datenschutzrichtlinie</div>
+    </div>
+
     <div class="container">
-        <h1>Datenschutzrichtlinie für WURSTAUFSBROT</h1>
         <p class="date">Stand: Mai 2026</p>
 
         <h2>1. Zusammenfassung</h2>
@@ -69,33 +88,26 @@
         <h2>3. Nutzung von Cloud-Diensten & APIs</h2>
         <p>Die App nutzt spezifische Dienste, um dir erweiterte Funktionen zu ermöglichen:</p>
         <ul>
-            <li><strong>Google Drive API:</strong> Dient ausschließlich dazu, deine lokalen Datenbank-Backups in deinem eigenen, privaten Google Drive zu sichern. Die Authentifizierung erfolgt über den OAuth 2.0 Standard.</li>
-            <li><strong>Firebase (Google Cloud):</strong> Wir nutzen Firebase Cloud Functions als sichere Brücke für den E-Mail-Versand. Dabei werden die Export-Daten (z. B. PDF-Berichte) kurzzeitig verschlüsselt an den Server übertragen, um den Versand zu triggern, und unmittelbar nach dem Versand gelöscht. Es findet keine dauerhafte Speicherung deiner Berichte auf unseren Servern statt.</li>
+            <li><strong>Google Drive API:</strong> Dient ausschließlich dazu, deine lokalen Datenbank-Backups in deinem eigenen, privaten Google Drive zu sichern.</li>
+            <li><strong>Firebase (Google Cloud):</strong> Wir nutzen Firebase Cloud Functions als sichere Brücke für den E-Mail-Versand. Dabei werden die Export-Daten kurzzeitig verschlüsselt an den Server übertragen und unmittelbar nach dem Versand gelöscht.</li>
         </ul>
 
         <h2>4. E-Mail-Versand über Drittanbieter (Brevo)</h2>
-        <p>Um den Versand deiner Berichte (z. B. monatliche Stundenzettel) zuverlässig zu ermöglichen, nutzen wir den Versanddienstleister <strong>Brevo</strong> (Sendinblue GmbH, Köpenicker Straße 126, 10179 Berlin).</p>
+        <p>Um den Versand deiner Berichte zuverlässig zu ermöglichen, nutzen wir den Versanddienstleister <strong>Brevo</strong> (Sendinblue GmbH, Berlin).</p>
         <ul>
-            <li><strong>Zweck:</strong> Wenn du einen E-Mail-Export auslöst, werden die Empfänger-E-Mail-Adresse und das generierte PDF an Brevo übertragen, um die Zustellung auszuführen.</li>
-            <li><strong>Datenschutz:</strong> Brevo ist ein europäischer Anbieter und arbeitet nach strengen DSGVO-Richtlinien. Die Daten werden nur für den technischen Versand genutzt und nicht für Marketingzwecke oder die Weitergabe an Dritte verwendet.</li>
+            <li><strong>Zweck:</strong> Übertragung der Empfänger-E-Mail und des PDFs zum Zwecke der Zustellung.</li>
+            <li><strong>Datenschutz:</strong> Europäischer Anbieter, konform mit der DSGVO. Keine Nutzung für Marketingzwecke.</li>
         </ul>
 
-        <h2>5. Keine Datenerhebung durch uns</h2>
-        <p>Wir erstellen keine Nutzerprofile. Die App setzt keine Tracking-Tools ein, um dein Verhalten zu analysieren. Wir erheben nur die Daten, die technisch absolut notwendig sind, um die von dir gewünschten Funktionen (Backup & Export) bereitzustellen.</p>
+        <h2>5. Keine Datenerhebung</h2>
+        <p>Wir erstellen keine Nutzerprofile und setzen keine Analyse-Tools ein. Wir erheben nur technisch notwendige Daten für die gewünschten Funktionen.</p>
 
-        <h2>6. Deine Rechte & Widerruf</h2>
-        <p>Du hast die volle Kontrolle:</p>
-        <ul>
-            <li>Du kannst deine Berechtigungen für Google Drive jederzeit in deinen Google-Kontoeinstellungen unter "Sicherheit" entziehen.</li>
-            <li>Alle lokal gespeicherten Daten können jederzeit durch das Löschen der App oder innerhalb der App-Einstellungen entfernt werden.</li>
-        </ul>
-
-        <h2>7. Kontakt</h2>
-        <p>Bei Fragen zum Datenschutz erreichst du uns unter:<br>
+        <h2>6. Kontakt</h2>
+        <p>Bei Fragen erreichst du uns unter:<br>
         <a href="mailto:support@wurstaufsbrot.de">support@wurstaufsbrot.de</a></p>
 
         <div class="footer">
-            &copy; 2026 WAB-App / WURSTAUFSBROT
+            &copy; 2026 WAB-Software / <a href="https://wurstaufsbrot.de">wurstaufsbrot.de</a>
         </div>
     </div>
 </body>
