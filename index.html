@@ -3,41 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutzrichtlinie - Wurstaufsbrot</title>
+    <title>Datenschutzerklärung - WURSTAUFSBROT</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
-        h1 { color: #2c3e50; }
-        h2 { color: #34495e; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #d35400;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+        .date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+            color: #95a5a6;
+            text-align: center;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Datenschutzrichtlinie für WURSTAUFSBROT</h1>
+        <p class="date">Stand: Mai 2026</p>
 
-    <h1>Datenschutzrichtlinie für Wurstaufsbrot</h1>
-    <p><em>Stand: April 2026</em></p>
+        <h2>1. Zusammenfassung</h2>
+        <p>Datenschutz hat bei <strong>Wurstaufsbrot</strong> höchste Priorität. Die App ist so konzipiert, dass deine persönlichen Arbeitszeitdaten grundsätzlich lokal auf deinem Gerät verbleiben. Für Funktionen wie den Cloud-Backup oder den automatisierten E-Mail-Export nutzen wir sichere Schnittstellen, ohne Nutzerprofile zu erstellen.</p>
 
-    <h2>1. Zusammenfassung</h2>
-    <p>Datenschutz hat bei "Wurstaufsbrot" höchste Priorität. Die App ist so konzipiert, dass <strong>keinerlei persönliche Daten auf unseren Servern gespeichert werden</strong>. Alle Daten verbleiben in deinem direkten Zugriffsbereich.</p>
+        <h2>2. Lokale Speicherung</h2>
+        <p>Alle von dir erfassten Arbeitszeiten, Arbeitgeber-Profile und Berichte werden primär lokal auf deinem Gerät gespeichert. Ohne deine explizite Nutzung der Backup- oder Exportfunktion findet keine Übertragung dieser Daten statt.</p>
 
-    <h2>2. Lokale Speicherung</h2>
-    <p>Alle von dir erfassten Arbeitszeiten, Arbeitgeber-Profile und Berichte werden ausschließlich lokal auf deinem Gerät gespeichert. Es findet keine Übertragung dieser Daten an unsere Server statt.</p>
+        <h2>3. Nutzung von Cloud-Diensten & APIs</h2>
+        <p>Die App nutzt spezifische Dienste, um dir erweiterte Funktionen zu ermöglichen:</p>
+        <ul>
+            <li><strong>Google Drive API:</strong> Dient ausschließlich dazu, deine lokalen Datenbank-Backups in deinem eigenen, privaten Google Drive zu sichern. Die Authentifizierung erfolgt über den OAuth 2.0 Standard.</li>
+            <li><strong>Firebase (Google Cloud):</strong> Wir nutzen Firebase Cloud Functions als sichere Brücke für den E-Mail-Versand. Dabei werden die Export-Daten (z. B. PDF-Berichte) kurzzeitig verschlüsselt an den Server übertragen, um den Versand zu triggern, und unmittelbar nach dem Versand gelöscht. Es findet keine dauerhafte Speicherung deiner Berichte auf unseren Servern statt.</li>
+        </ul>
 
-    <h2>3. Nutzung von Google APIs</h2>
-    <p>Die App nutzt optionale Google APIs, um dir erweiterte Funktionen zu ermöglichen:</p>
-    <ul>
-        <li><strong>Google Drive API:</strong> Dient ausschließlich dazu, deine lokalen Datenbank-Backups in deinem eigenen, privaten Google Drive zu sichern und zu synchronisieren.</li>
-        <li><strong>Gmail API:</strong> Dient ausschließlich dazu, von dir explizit ausgelöste Berichte (z.B. monatliche Stundenzettel) per E-Mail aus deinem eigenen Konto zu versenden.</li>
-    </ul>
-    <p>Die Authentifizierung erfolgt über den offiziellen OAuth 2.0 Standard von Google. Wir erhalten zu keinem Zeitpunkt Zugriff auf dein Google-Passwort oder andere sensible Kontodaten.</p>
+        <h2>4. E-Mail-Versand über Drittanbieter (Brevo)</h2>
+        <p>Um den Versand deiner Berichte (z. B. monatliche Stundenzettel) zuverlässig zu ermöglichen, nutzen wir den Versanddienstleister <strong>Brevo</strong> (Sendinblue GmbH, Köpenicker Straße 126, 10179 Berlin).</p>
+        <ul>
+            <li><strong>Zweck:</strong> Wenn du einen E-Mail-Export auslöst, werden die Empfänger-E-Mail-Adresse und das generierte PDF an Brevo übertragen, um die Zustellung auszuführen.</li>
+            <li><strong>Datenschutz:</strong> Brevo ist ein europäischer Anbieter und arbeitet nach strengen DSGVO-Richtlinien. Die Daten werden nur für den technischen Versand genutzt und nicht für Marketingzwecke oder die Weitergabe an Dritte verwendet.</li>
+        </ul>
 
-    <h2>4. Keine Datenerhebung durch uns</h2>
-    <p>Die App setzt keine Analysetools (wie Firebase Crashlytics, Google Analytics oder Ähnliches) ein. Es werden keine Nutzerprofile erstellt und keine Daten zu Werbezwecken an Dritte weitergegeben.</p>
+        <h2>5. Keine Datenerhebung durch uns</h2>
+        <p>Wir erstellen keine Nutzerprofile. Die App setzt keine Tracking-Tools ein, um dein Verhalten zu analysieren. Wir erheben nur die Daten, die technisch absolut notwendig sind, um die von dir gewünschten Funktionen (Backup & Export) bereitzustellen.</p>
 
-    <h2>5. Deine Rechte</h2>
-    <p>Da wir keine Daten von dir speichern, hast du die volle Kontrolle. Du kannst alle Daten jederzeit direkt in der App löschen oder deine Berechtigungen für Google Drive/Gmail in deinen Google-Kontoeinstellungen unter "Sicherheit" jederzeit entziehen.</p>
+        <h2>6. Deine Rechte & Widerruf</h2>
+        <p>Du hast die volle Kontrolle:</p>
+        <ul>
+            <li>Du kannst deine Berechtigungen für Google Drive jederzeit in deinen Google-Kontoeinstellungen unter "Sicherheit" entziehen.</li>
+            <li>Alle lokal gespeicherten Daten können jederzeit durch das Löschen der App oder innerhalb der App-Einstellungen entfernt werden.</li>
+        </ul>
 
-    <h2>6. Kontakt</h2>
-    <p>Bei Fragen zum Datenschutz kannst du uns per E-Mail kontaktieren:<br>
-    <strong>patrick.kahrs@live.de</strong></p>
+        <h2>7. Kontakt</h2>
+        <p>Bei Fragen zum Datenschutz erreichst du uns unter:<br>
+        <a href="mailto:support@wurstaufbrot.de">support@wurstaufbrot.de</a></p>
 
+        <div class="footer">
+            &copy; 2026 WAB-Software / WURSTAUFSBROT
+        </div>
+    </div>
 </body>
 </html>
