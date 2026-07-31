@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutzerklärung - WAB-App / WURSTAUFSBROT</title>
+    <title>Datenschutzerklärung - WURSTAUFSBROT</title>
+
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -14,15 +15,18 @@
             padding: 20px;
             background-color: #f4f7f6;
         }
+
         .header-area {
             text-align: center;
             padding: 40px 0;
         }
+
         .logo {
-            max-width: 150px; /* Hier kannst du die Größe deines Logos anpassen */
+            max-width: 150px;
             height: auto;
             margin-bottom: 10px;
         }
+
         .app-name {
             font-size: 2.5em;
             font-weight: bold;
@@ -31,31 +35,42 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
+
         .subtitle {
             color: #7f8c8d;
             font-size: 1.1em;
             margin-top: 5px;
         }
+
         .container {
             background: #fff;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
+
         h2 {
             color: #2c3e50;
             margin-top: 30px;
             border-left: 4px solid #d35400;
             padding-left: 15px;
         }
+
         .date {
             color: #bdc3c7;
             font-size: 0.9em;
             margin-bottom: 30px;
             text-align: center;
         }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
         .footer {
             margin-top: 50px;
             font-size: 0.85em;
@@ -64,58 +79,150 @@
             border-top: 1px solid #eee;
             padding-top: 20px;
         }
-        a { color: #3498db; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
+
 <body>
 
-    <div class="header-area">
-        <img src="WURSTAUFSBROT_Logo.png" alt="WURSTAUFSBROT_Logo" class="logo">
-        <div class="app-name">WURSTAUFSBROT</div>
-        <div class="subtitle">Datenschutzrichtlinie</div>
+<div class="header-area">
+    <img src="WURSTAUFSBROT_Logo.png" alt="WURSTAUFSBROT Logo" class="logo">
+
+    <div class="app-name">
+        WURSTAUFSBROT
     </div>
 
-    <div class="container">
-        <p class="date">Stand: Mai 2026</p>
-
-        <h2>1. Zusammenfassung</h2>
-        <p>Datenschutz hat bei <strong>WURSTAUFSBROT</strong> höchste Priorität. Die App ist so konzipiert, dass deine persönlichen Arbeitszeitdaten grundsätzlich lokal auf deinem Gerät verbleiben. Für Funktionen wie den Cloud-Backup oder den automatisierten E-Mail-Export nutzen wir sichere Schnittstellen, ohne Nutzerprofile zu erstellen.</p>
-
-        <h2>2. Lokale Speicherung</h2>
-        <p>Alle von dir erfassten Arbeitszeiten, Arbeitgeber-Profile und Berichte werden primär lokal auf deinem Gerät gespeichert. Ohne deine explizite Nutzung der Backup- oder Exportfunktion findet keine Übertragung dieser Daten statt.</p>
-
-        <h2>3. Nutzung von Cloud-Diensten & APIs</h2>
-        <p>Die App nutzt spezifische Dienste, um dir erweiterte Funktionen zu ermöglichen:</p>
-        <ul>
-            <li><strong>Google Drive API:</strong> Dient ausschließlich dazu, deine lokalen Datenbank-Backups in deinem eigenen, privaten Google Drive zu sichern.</li>
-            <li><strong>Firebase (Google Cloud):</strong> Wir nutzen Firebase Cloud Functions als sichere Brücke für den E-Mail-Versand. Dabei werden die Export-Daten kurzzeitig verschlüsselt an den Server übertragen und unmittelbar nach dem Versand gelöscht.</li>
-        </ul>
-
-        <h2>4. E-Mail-Versand über Drittanbieter (Brevo)</h2>
-        <p>Um den Versand deiner Berichte zuverlässig zu ermöglichen, nutzen wir den Versanddienstleister <strong>Brevo</strong> (Sendinblue GmbH, Berlin).</p>
-        <ul>
-            <li><strong>Zweck:</strong> Übertragung der Empfänger-E-Mail und des PDFs zum Zwecke der Zustellung.</li>
-            <li><strong>Datenschutz:</strong> Europäischer Anbieter, konform mit der DSGVO. Keine Nutzung für Marketingzwecke.</li>
-        </ul>
-
-        <h2>5. Keine Datenerhebung</h2>
-        <p>Wir erstellen keine Nutzerprofile und setzen keine Analyse-Tools ein. Wir erheben nur technisch notwendige Daten für die gewünschten Funktionen.</p>
-
-        <h2>6. Kontakt</h2>
-        <p>Bei Fragen erreichst du uns unter:<br>
-        <a href="mailto:support@wurstaufsbrot.de">support@wurstaufsbrot.de</a></p>
-        
-        <h2>7. Datenlöschung</h2>
-        👋 Konto löschen? Kein Ding.
-        Deine Arbeitszeiten gehören dir und liegen sowieso nur lokal auf deinem Handy. 
-        Auf unserem Server liegt durch den Login via Firebase lediglich deine E-Mail-Adresse. 
-        Wenn du dein Konto komplett löschen willst, schreib uns einfach kurz an support@wurstaufsbrot.de – wir schmeißen deine Mail-Adresse dann sofort und rückstandslos aus dem System.
-        <a href="mailto:support@wurstaufsbrot.de">support@wurstaufsbrot.de</a></p>
-
-        <div class="footer">
-            &copy; 2026 WAB-App / <a href="https://wurstaufsbrot.de">wurstaufsbrot.de</a>
-        </div>
+    <div class="subtitle">
+        Datenschutzrichtlinie
     </div>
+</div>
+
+<div class="container">
+
+    <p class="date">
+        Stand: Juli 2026
+    </p>
+
+    <h2>1. Zusammenfassung</h2>
+
+    <p>
+        Datenschutz hat bei <strong>WURSTAUFSBROT</strong> höchste Priorität.
+        Die App wurde so entwickelt, dass deine Arbeitszeitdaten grundsätzlich lokal auf deinem Gerät gespeichert werden.
+        Cloud-Dienste werden ausschließlich für optionale Funktionen wie die Anmeldung mit Google, Backups, Exporte oder den Versand von Berichten genutzt.
+    </p>
+
+    <h2>2. Lokale Speicherung</h2>
+
+    <p>
+        Alle von dir erfassten Arbeitszeiten, Arbeitgeberprofile, Einstellungen und Berichte werden primär lokal auf deinem Gerät gespeichert.
+        Ohne deine ausdrückliche Nutzung der Backup-, Export- oder E-Mail-Funktion werden diese Daten nicht übertragen.
+    </p>
+
+    <h2>3. Nutzung von Cloud-Diensten</h2>
+
+    <p>
+        Die App nutzt folgende Cloud-Dienste ausschließlich für die von dir gewünschten Funktionen:
+    </p>
+
+    <ul>
+        <li>
+            <strong>Google Drive API:</strong>
+            Dient ausschließlich dazu,
+            <ul>
+                <li>Backups deiner lokalen Datenbank in deinem eigenen Google Drive zu speichern,</li>
+                <li>PDF-Berichte in deinem Google Drive abzulegen sowie</li>
+                <li>CSV-Exporte in deinem Google Drive zu speichern.</li>
+            </ul>
+            Die Dateien werden ausschließlich in deinem persönlichen Google Drive gespeichert.
+            Wir haben keinen Zugriff auf diese Daten.
+        </li>
+
+        <li>
+            <strong>Firebase Authentication (Google):</strong>
+            Wird ausschließlich für die Anmeldung mit deinem Google-Konto verwendet.
+            Dabei werden lediglich die für die Authentifizierung erforderlichen Informationen (z. B. deine E-Mail-Adresse und deine eindeutige Nutzer-ID) verarbeitet.
+            Arbeitszeitdaten, Berichte oder Backups werden nicht in Firebase gespeichert.
+        </li>
+    </ul>
+
+    <h2>4. E-Mail-Versand über Brevo</h2>
+
+    <p>
+        Für den Versand deiner Berichte per E-Mail nutzen wir den europäischen E-Mail-Dienstleister
+        <strong>Brevo</strong> (Sendinblue GmbH).
+    </p>
+
+    <ul>
+        <li>
+            <strong>Zweck:</strong>
+            Versand von PDF-Berichten an die von dir angegebene Empfänger-E-Mail-Adresse.
+        </li>
+
+        <li>
+            <strong>Verarbeitete Daten:</strong>
+            Empfänger-E-Mail-Adresse, Betreff, Nachrichtentext sowie das zu versendende PDF.
+        </li>
+
+        <li>
+            <strong>Datenschutz:</strong>
+            Brevo verarbeitet diese Daten ausschließlich zum Versand der E-Mail und nutzt sie nicht für Werbe- oder Marketingzwecke.
+        </li>
+    </ul>
+
+    <h2>5. Keine Datenerhebung</h2>
+
+    <p>
+        Wir erstellen keine Nutzerprofile und setzen keine Analyse-, Tracking- oder Werbedienste ein.
+        Es werden ausschließlich diejenigen Daten verarbeitet, die technisch notwendig sind, um die von dir genutzten Funktionen bereitzustellen.
+    </p>
+
+    <h2>6. Kontakt</h2>
+
+    <p>
+        Bei Fragen zum Datenschutz erreichst du uns jederzeit unter:
+    </p>
+
+    <p>
+        <a href="mailto:support@wurstaufsbrot.de">
+            support@wurstaufsbrot.de
+        </a>
+    </p>
+
+    <h2>7. Datenlöschung</h2>
+
+    <p>
+        Deine Arbeitszeitdaten werden ausschließlich lokal auf deinem Gerät gespeichert.
+    </p>
+
+    <p>
+        Wenn du die Backup- oder Exportfunktionen nutzt, werden die von dir ausgewählten Dateien zusätzlich in deinem eigenen Google Drive gespeichert.
+        Diese Dateien kannst du jederzeit selbst über dein Google-Konto löschen.
+    </p>
+
+    <p>
+        Für die Anmeldung mit Google wird in Firebase Authentication lediglich dein Benutzerkonto (z. B. deine E-Mail-Adresse und deine Nutzer-ID) verwaltet.
+    </p>
+
+    <p>
+        Möchtest du dein Benutzerkonto vollständig löschen, sende einfach eine E-Mail an
+        <a href="mailto:support@wurstaufsbrot.de">support@wurstaufsbrot.de</a>.
+        Wir löschen dein Firebase-Benutzerkonto anschließend vollständig.
+    </p>
+
+    <div class="footer">
+        &copy; 2026 WURSTAUFSBROT –
+        <a href="https://wurstaufsbrot.de">wurstaufsbrot.de</a>
+    </div>
+
+</div>
+
 </body>
 </html>
